@@ -5,5 +5,4 @@ Implementation Instruction:
 implementation can be performed on both macOS and LINUX, I would recommend before executing the commands, please use the below steps.
 
 1. make clean – This will clean the make file which was stored before in any system.
-
-`make clean`
+-  `make clean`
