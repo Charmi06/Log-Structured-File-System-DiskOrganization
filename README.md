@@ -7,7 +7,8 @@ implementation can be performed on both macOS and LINUX, I would recommend befor
 1. make clean – This will clean the make file which was stored before in any system.
    ```bash
    make clean
-   <button id="copy-button">Copy</button>
+
+<button id="copy-button">Copy</button>
 <script>
 const copyButton = document.getElementById('copy-button');
 const commandCodeBlock = document.querySelector('pre code');
