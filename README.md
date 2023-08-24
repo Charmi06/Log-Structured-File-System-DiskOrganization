@@ -7,11 +7,13 @@ implementation can be performed on both macOS and LINUX, I would recommend befor
 1. make clean – This will clean the make file which was stored before in any system.
    ```bash
    make clean
-   <button id="copy-button-1">Copy</button>
+
+<button id="copy-button-1">Copy</button>
 <script>
-setupCopyButton('copy-button-1', 'pre code');
+   setupCopyButton('copy-button-1', 'pre code');
 </script>
-   <script>
+
+<script>
 function setupCopyButton(buttonId, codeBlockSelector) {
   const copyButton = document.getElementById(buttonId);
   const commandCodeBlock = document.querySelector(codeBlockSelector);
