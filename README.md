@@ -7,22 +7,30 @@ implementation can be performed on both macOS and LINUX, I would recommend befor
 1. make clean – This will clean the make file which was stored before in any system.
    ```bash
    make clean
-   <button id="copy-button">Copy</button>
-<script>
-const copyButton = document.getElementById('copy-button');
-const commandCodeBlock = document.querySelector('pre code');
+   <button id="copy-button-1">Copy</button>
+   <script>
+      setupCopyButton('copy-button-1', 'pre code');
+   </script>
 
-copyButton.addEventListener('click', () => {
-  const commandText = commandCodeBlock.textContent.trim();
-  const tempTextarea = document.createElement('textarea');
-  tempTextarea.value = commandText;
-  document.body.appendChild(tempTextarea);
-  tempTextarea.select();
-  document.execCommand('copy');
-  document.body.removeChild(tempTextarea);
-  copyButton.textContent = 'Copied!';
-  setTimeout(() => {
-    copyButton.textContent = 'Copy';
-  }, 1500);
-});
+
+   <script>
+function setupCopyButton(buttonId, codeBlockSelector) {
+  const copyButton = document.getElementById(buttonId);
+  const commandCodeBlock = document.querySelector(codeBlockSelector);
+
+  copyButton.addEventListener('click', () => {
+    const commandText = commandCodeBlock.textContent.trim();
+    const tempTextarea = document.createElement('textarea');
+    tempTextarea.value = commandText;
+    document.body.appendChild(tempTextarea);
+    tempTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextarea);
+    copyButton.textContent = 'Copied!';
+    setTimeout(() => {
+      copyButton.textContent = 'Copy';
+    }, 1500);
+  });
+}
 </script>
+
